@@ -23,9 +23,9 @@
         <div class="haeder-section">
           <a class="logo" href="#"><span class="highlight">Web</span>Studio</a>
           <ul class="menu no-bullet">
-            <li><a href="#">Agencja</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a class="menu-item active-menu-item" href="#">Agencja</a></li>
+            <li><a class="menu-item" href="portfolio.html">Portfolio</a></li>
+            <li><a class="menu-item" href="#">Kontakt</a></li>
           </ul>
           <div class="haeder-contact-data">
             <a href="mailto:info@devstudio.com">
@@ -48,7 +48,7 @@
       <section class="upper-section">
         <div class="container">
           <h1>EFEKTYWNE ROZWIĄZANIA <br />DLA WASZEGO BIZNESU</h1>
-          <button type="button" class="service-order-button">
+          <button type="button" class="service-order-button" data-modal-open>
             Zamów usługę
           </button>
         </div>
@@ -113,28 +113,43 @@
             <h2 class="section-haeder">Czym się zajmujemy</h2>
             <ul class="what-we-do-list no-bullet">
               <li>
-                <img
-                  width="370"
-                  height="294"
-                  src="./images/img1.jpg"
-                  alt="Somone working on a project"
-                />
+                <div class="wwd-img-container">
+                  <img
+                    width="370"
+                    height="294"
+                    src="./images/img1.jpg"
+                    alt="Somone working on a project"
+                  />
+                  <div class="wwd-img-overlay">
+                    <h3>Aplikacje komputerowe</h3>
+                  </div>
+                </div>
               </li>
               <li>
-                <img
-                  width="370"
-                  height="294"
-                  src="./images/img2.jpg"
-                  alt="Somone working on a project"
-                />
+                <div class="wwd-img-container">
+                  <img
+                    width="370"
+                    height="294"
+                    src="./images/img2.jpg"
+                    alt="Somone working on a project"
+                  />
+                  <div class="wwd-img-overlay">
+                    <h3>Aplikacje mobilne</h3>
+                  </div>
+                </div>
               </li>
               <li>
-                <img
-                  width="370"
-                  height="294"
-                  src="./images/img3.jpg"
-                  alt="Somone working on a project"
-                />
+                <div class="wwd-img-container">
+                  <img
+                    width="370"
+                    height="294"
+                    src="./images/img3.jpg"
+                    alt="Somone working on a project"
+                  />
+                  <div class="wwd-img-overlay">
+                    <h3>Rozwiązania graficzne</h3>
+                  </div>
+                </div>
               </li>
             </ul>
           </section>
@@ -449,5 +464,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="close-btn-img" width="11px" height="11px">
+            <use href="./images/svg/icons.svg#icon-close-window"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
